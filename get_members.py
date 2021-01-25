@@ -12,7 +12,7 @@ channels = {d.entity.username: d.entity
 
 
 def save_members(username,id, access_hash,name):
-    with open('tbot.csv', mode='w') as csv_file:
+    with open('tbot.csv', mode='a+') as csv_file:
         fieldnames = ['username','id','access_hash','name']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         
